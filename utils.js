@@ -10,3 +10,18 @@ function normaliseInterpolate(n, start1, end1, start2, end2) {
 function formatDate(date) { 
     return date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' }); 
 }
+
+function makeImageFromURL(url) {
+    return new Promise(resolve => {
+        const image = new Image();
+        image.addEventListener("load", () => {
+            resolve(image);
+        });
+        image.src = url;
+    });
+}
+
+function fetchJSON(url) {
+    return fetch(url)
+        .then(r => r.json());
+}
