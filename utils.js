@@ -25,6 +25,6 @@ function fetchJSON(url) {
     return fetch(url).then(r => r.json());
 }
 
-function Delay(time) {
+function delay(time) {
 	return new Promise((resolve) => setTimeout(resolve, time))
 };
