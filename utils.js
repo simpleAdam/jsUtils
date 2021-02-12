@@ -7,6 +7,7 @@ function normalizeInterpolate(n, start1, end1, start2, end2) {
   return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
 }
 // new Date => "February 12"
+// implementation appears to vary
 function formatDate(date) { 
     return date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' }); 
 }
