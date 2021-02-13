@@ -9,11 +9,11 @@ function normalizeInterpolate(n, start1, end1, start2, end2) {
 // new Date => "February 12"
 // implementation appears to vary
 function formatDate(date) { 
-    return date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' }); 
+   return date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' }); 
 }
 
 function makeImageFromURL(url) {
-    return new Promise(resolve => {
+   return new Promise(resolve => {
         const image = new Image();
         image.addEventListener("load", () => {
             resolve(image);
@@ -27,5 +27,10 @@ function fetchJSON(url) {
 }
 
 function delay(time) {
-	return new Promise((resolve) => setTimeout(resolve, time))
+   return new Promise((resolve) => setTimeout(resolve, time))
 };
+
+// somewhat Gaussian random
+function gaussian() {
+  return ((Math.random()+Math.random())/2)
+}
