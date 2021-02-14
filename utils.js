@@ -30,6 +30,20 @@ function delay(time) {
    return new Promise((resolve) => setTimeout(resolve, time))
 };
 
+// a throttle function with a delay. found online.
+// throttle(200, mouseMoveHandler)
+function throttle(delay, callback) => {
+    let previousTime = 0;
+
+    return (...args) => {
+        const currentTime = new Date().getTime();
+        if (currentTime - previousTime > delay) {
+            previousTime = currentTime;
+            return callback(...args);
+        }
+    };
+};
+
 // somewhat Gaussian random
 function gaussian() {
   return ((Math.random()+Math.random())/2)
