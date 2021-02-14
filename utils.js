@@ -12,15 +12,11 @@ function formatDate(date) {
    return date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' }); 
 }
 
-function makeImageFromURL(url) {
-   return new Promise(resolve => {
-        const image = new Image();
-        image.addEventListener("load", () => {
-            resolve(image);
-        });
-        image.src = url;
-    });
-}
+function promisify(fn) {
+ 	return new Promise((resolve,reject) => {
+ 		fn(resolve,reject)
+ 	})
+ }
 
 function fetchJSON(url) {
     return fetch(url).then(r => r.json());
