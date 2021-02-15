@@ -37,7 +37,7 @@ function delay(time) {
 };
 
 
-// a throttle function with a delay. found online.
+// a throttle function found online.
 // throttle(200, mouseMoveHandler)
 function throttle(delay, callback) => {
     let previousTime = 0;
