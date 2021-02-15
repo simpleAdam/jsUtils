@@ -1,4 +1,4 @@
-// "my files" => "my-files"
+// "My files" => "my-files"
 function normalizeName(name) {
     return name.replace(/\s+/g, '-').toLowerCase();
 }
