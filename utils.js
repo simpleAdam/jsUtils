@@ -21,17 +21,19 @@ Intl.DateTimeFormat('en', { year: 'numeric' }).format(date); // => 2021
 Intl.DateTimeFormat('en', { month: 'long' }).format(date); // => "February"
 Intl.DateTimeFormat('en', { day: '2-digit' }).format(date); // => 15
 
-
+// fn => promise
 function promisify(fn) {
  	return new Promise((resolve,reject) => {
  		fn(resolve,reject)
  	})
  }
 
+// json url => promise
 function fetchJSON(url) {
     return fetch(url).then(r => r.json());
 }
 
+// ms => promise
 function delay(time) {
    return new Promise((resolve) => setTimeout(resolve, time))
 };
@@ -52,6 +54,7 @@ function throttle(delay, callback) => {
 };
 
 // somewhat Gaussian random
+// void => 0...1
 function gaussian() {
   return ((Math.random()+Math.random())/2)
 }
