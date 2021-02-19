@@ -63,3 +63,7 @@ function throttle(delay, callback) => {
 function gaussian() {
   return ((Math.random()+Math.random())/2)
 }
+
+
+const isDigit = char => /^\d+$/.test(char);
+const isLetter = char => char.toUpperCase() !== char.toLowerCase() || char.codePointAt(0) > 127;
