@@ -1,0 +1,23 @@
+{
+  "name": "jsUtils",
+  "version": "1.0.0",
+  "description": "i envision a place just for some javascript util functions",
+  "main": "utils.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simpleAdam/jsUtils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simpleAdam/jsUtils/issues"
+  },
+  "homepage": "https://github.com/simpleAdam/jsUtils#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

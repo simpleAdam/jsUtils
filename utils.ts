@@ -1,11 +1,11 @@
 // "My files" => "my-files"
-function normalizeName(name) {
+function normalizeName(name: string) {
     return name.replace(/\s+/g, '-').toLowerCase();
 }
 
 // "<p></p>" => "&lt;p&gt;&lt;/p&gt;"
-const cleanseString = function(string) {
-  return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const cleanseString = function(str:string) {
+  return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 
 // (3,1,5,10,50) => 30
@@ -15,7 +15,7 @@ function normalizeInterpolate(n, start1, end1, start2, end2) {
 
 
 // new Date => "February 12"
-// implementation appears to vary
+// result appears to vary
 function formatDate(date) { 
    return date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' }); 
 }
@@ -34,12 +34,12 @@ function promisify(fn) {
  }
 
 // json url => promise
-function fetchJSON(url) {
+function fetchJSON(url: string) {
     return fetch(url).then(r => r.json());
 }
 
 // ms => promise
-function delay(time) {
+function delay(time: number) {
    return new Promise((resolve) => setTimeout(resolve, time))
 };
 
@@ -65,5 +65,9 @@ function gaussian() {
 }
 
 
-const isDigit = char => /^\d+$/.test(char);
-const isLetter = char => char.toUpperCase() !== char.toLowerCase() || char.codePointAt(0) > 127;
+function isDigit(char: string) {
+  return /^\d+$/.test(char) 
+}
+function isLetter(char: string) {
+  return char.toUpperCase() !== char.toLowerCase() || char.codePointAt(0) > 127 
+};
