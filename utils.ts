@@ -1,11 +1,11 @@
 // "My files" => "my-files"
 function normalizeName(name: string) {
-    return name.replace(/\s+/g, '-').toLowerCase();
+    return name.replace(/\s+/gu, '-').toLowerCase();
 }
 
 // "<p></p>" => "&lt;p&gt;&lt;/p&gt;"
 const cleanseString = function(str:string) {
-  return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return str.replace(/</gu, "&lt;").replace(/>/gu, "&gt;");
 };
 
 // (3,1,5,10,50) => 30
