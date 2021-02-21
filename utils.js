@@ -65,5 +65,9 @@ function gaussian() {
 }
 
 
-const isDigit = char => /^\d+$/.test(char);
-const isLetter = char => char.toUpperCase() !== char.toLowerCase() || char.codePointAt(0) > 127;
+function isDigit(char) {
+  return /^\d+$/.test(char) 
+}
+function isLetter(char) {
+  return char.toUpperCase() !== char.toLowerCase() || char.codePointAt(0) > 127 
+};
