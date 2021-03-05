@@ -1,3 +1,12 @@
+String.prototype.replaceAt = function (index, characters) {
+    return this.substr(0, index) + characters + this.substr(index + characters.length);
+}
+
+Number.prototype.inRange = function (a, b) {
+    var n = +this;
+    return ( n >= a && n <= b );
+};
+
 // "My files" => "my-files"
 function normalizeName(name: string) {
     return name.replace(/\s+/gu, '-').toLowerCase();
