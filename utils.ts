@@ -7,6 +7,16 @@ Number.prototype.inRange = function (a, b) {
     return ( n >= a && n <= b );
 };
 
+// unit8array => string
+const ToBase64 = u8 => {
+	return btoa(String.fromCharCode.apply(null, u8))
+}
+
+// string => unit8array
+const FromBase64 = str => {
+	return atob(str).split('').map( c => c.charCodeAt(0) )
+}
+
 // "My files" => "my-files"
 function normalizeName(name: string) {
     return name.replace(/\s+/gu, '-').toLowerCase();
