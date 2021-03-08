@@ -1,3 +1,8 @@
+// (0,50,55) => 50
+const clamp = function(minimum, maximum, value) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
 String.prototype.replaceAt = function (index, characters) {
     return this.substr(0, index) + characters + this.substr(index + characters.length);
 }
